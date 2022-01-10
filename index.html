@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Descobrindo Bandeiras</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <main>
+        <section id="menu">
+            <p id="menu-title"> 🌎 Descobrindo Bandeiras 🌎</p>
+            <section class="menu-section">
+                <p class="menu-subtitle"> 💡 Objetivo</p>
+                <p>Acertar as bandeiras dos países da copa do mundo de 2018 no menor tempo possível</p>
+            </section>
+            <section class="menu-section">
+                <p class="menu-subtitle"> ✔️ Instruções</p>
+                <div>• A dica mostra a capital ou o continente do país</div>
+                <div>• O pulo deixa você pular o país atual para tentar outro</div>
+                <div>• A cada três sequências corretas consecutivas você ganha uma dica</div>
+                <div>• A cada quatro sequências corretas consecutivas você ganha um pulo</div>
+            </section>
+            <section class="menu-section">
+                <p class="menu-subtitle"> 🎮 Melhor Jogo</p>
+                <div>Tempo: <span id="best-time"></span></div>
+                <div>Tentativas: <span id="best-attempts"></span></div>
+                <div>Tentativas Certas: <span id="best-correct-attempts"></span></div>
+                <div>Tentativas Erradas: <span id="best-wrong-attempts"></span></div>
+            </section>
+            <section class="btns">
+                <button class="btn game-btn" id="btn-new-game" onclick="game.init()">Jogar</button>
+            </section>
+        </section>
+        <section id="game" hidden>
+            <img src="http://flags.fmcdn.net/data/flags/w580/br.png" id="flag-img">
+            <section class="btns" id="countries-section"></section>
+            <section class="btns">
+                <button class="btn game-btn" id="confirm-btn" onclick="game.verifyAttempt()"></button>
+                <button class="btn game-btn" id="jump-btn" onclick="game.jump()">Pular<span class="num-text" id="jump"></span></button>
+                <button class="btn game-btn" id="tip-btn" onclick="game.tip()">Dica<span class="num-text" id="tip"></span></button>
+                <button class="btn game-btn" id="back-btn" onclick="game.openMenu()">Voltar</button>
+            </section>
+        </section>
+        <section id="info" hidden>
+            <section class="info-section">
+                <div class="info-section-title">Tempo</div>
+                <div><span id="current-time"></span></div>
+            </section>
+            <section class="info-section">
+                <div class="info-section-title">Tentativas</div>
+                <div>Total: <span id="attempts"></span></div>
+                <div>Certas: <span id="correct-attempts"></span></div>
+                <div>Erradas: <span id="wrong-attempts"></span></div>
+            </section>
+            <section class="info-section">
+                <div class="info-section-title">Dica</div>
+                <div>Continente: <span class="tip-info" id="continent"></span></div>
+                <div>Capital: <span class="tip-info" id="capital"></span></div>
+            </section>
+        </section>
+    </main>
+    <script src="js/countries.js"></script>
+    <script src="js/chronometer.js"></script>
+    <script src="js/view.js"></script>
+    <script src="js/game.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>
