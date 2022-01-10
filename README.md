@@ -42,5 +42,3 @@ Acertar as bandeiras dos países que participaram da copa do mundo de 2018 no me
 ## 📃 Licença
 
 Esse projeto está sob a licença MIT. Veja o arquivo [LICENSE](LICENSE) para mais detalhes.
-
-https://www.letscode.com.br/blog/como-hospedar-seu-site-pelo-github-pages
